@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTROL FLOW</title>
+</head>
+
+<body>
+    <H1>3️⃣ Control Flow in JavaScript</H1>
+
+    <H1>1️⃣ if / else Statements</H1>
+
+    <script>
+        let age = 18;
+
+        if (age >= 18) {
+            console.log("You are an adult.");
+        } else {
+            console.log("You are a minor.");
+        }
+
+    </script>
+
+    <hr>
+    <h1>2️⃣ else if</h1>
+    <p>👉 Multiple conditions can be checked.</p>
+
+    <script>
+        let marks = 85;
+
+        if (marks >= 90) {
+            console.log("Grade A");
+        } else if (marks >= 75) {
+            console.log("Grade B");
+        } else if (marks >= 50) {
+            console.log("Grade C");
+        } else {
+            console.log("Fail");
+        }
+
+    </script>
+
+    <h1>3️⃣ switch / case</h1>
+    <p>👉 Alternative to multiple if/else. <br>
+        👉 Compares strictly (===).</p>
+
+    <script>
+        let day = 3;
+
+        switch (day) {
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+            case 3:
+                console.log("Wednesday");
+                break;
+            default:
+                console.log("Invalid day");
+        }
+    </script>
+    <hr>
+
+    <h1>🔄 Loops</h1>
+    <p>Loops are used to repeat code until a condition is met.</p>
+
+    <p>4️⃣ for Loop <br>
+        👉 Runs a block of code a fixed number of times.</p>
+
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            console.log("Count:", i);
+        }
+
+    </script>
+
+    <p>5️⃣ while Loop <br>
+        👉 Runs while the condition is true.</p>
+
+    <script>
+        let i = 1;
+        while (i <= 5) {
+            console.log("Number:", i);
+            i++;
+        }
+    </script>
+
+    <p>6️⃣ do...while Loop <br>
+        👉 Runs at least once, even if the condition is false.</p>
+
+    <script>
+        let j = 6;
+        do {
+            console.log("Executed at least once:", j);
+            j++;
+        } while (j <= 5);
+
+    </script>
+
+    <p>7️⃣ for...of Loop <br>
+        👉 Used to loop through arrays, strings, or iterable objects.</p>
+
+    <script>
+        let fruits = ["apple", "banana", "mango"];
+
+        for (let fruit of fruits) {
+            console.log(fruit);
+        }
+    </script>
+
+    <p>8️⃣ for...in Loop <br>
+        👉 Used to loop through object properties (keys).</p>
+
+    <script>
+        let person = { name: "John", age: 25, city: "Delhi" };
+
+        for (let key in person) {
+            console.log(key, ":", person[key]);
+        }
+
+    </script>
+</body>
+
+</html>

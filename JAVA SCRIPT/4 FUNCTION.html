@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONS</title>
+</head>
+
+<body>
+    <h1>1️⃣ Function Declaration <br>
+        👉 Standard way of creating a function.
+    </h1>
+
+    <script>
+        function ansar() {
+            console.log("hello world")
+        }
+
+        ansar();
+    </script>
+
+    <h1>2️⃣ Function Expression <br>
+        👉 Assign a function to a variable.</h1>
+
+    <script>
+        const get = function () {
+            console.log("Hello from a function expression!");
+        };
+
+        get();
+
+    </script>
+
+    <h1>3️⃣ Arrow Functions (()=>{}) <br>
+        👉 Shorter syntax introduced in ES6. <br>
+        👉 Especially useful for small, one-line functions.</h1>
+
+    <script>
+        const greet = () => {
+            console.log("Hello from an arrow function!");
+        };
+
+        greet();
+
+        const add = (a, b) => a + b;
+        console.log(add(5, 3)); // 8
+        
+    </script>
+
+    <h1>4️⃣ Parameters and Arguments <br>
+        👉 Parameters = placeholders inside function. <br>
+        👉 Arguments = actual values you pass when calling.</h1>
+
+    <script>
+        function greetUser(name) {   // name → parameter
+            console.log("Hello, " + name);
+        }
+
+        greetUser("Alice");  // "Alice" → argument
+
+    </script>
+
+    <h1>5️⃣ Return Statement <br>
+        👉 Functions can return values.</h1>
+
+    <script>
+        function multiply(x, y) {
+            return x * y;
+        }
+
+        let result = multiply(4, 5);
+        console.log(result); // 20
+
+        const square = num => num * num;
+        console.log(square(6)); // 36
+    </script>
+</body>
+
+</html>

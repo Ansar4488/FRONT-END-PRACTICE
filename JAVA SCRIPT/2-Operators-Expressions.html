@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators & Expressions</title>
+</head>
+
+<body>
+    <h1>Operators & Expressions</h1>
+
+    <script>
+        let x = 5 + 3;  // expression → result is 8
+    </script>
+
+    <h2>Arithmetic Operators</h2>
+
+    <script>
+        console.log(5 + 2);
+        console.log(5 - 2);
+        console.log(5 * 2);
+        console.log(5 / 2);
+        console.log(5 % 2);
+        console.log(5 ** 2);
+    </script>
+
+    <h2>2️⃣ Assignment Operators</h2>
+
+    <p>| Operator | Example | Equivalent to | <br>
+        | -------- | -------- | ------------- | <br>
+        | `=` | `x = 5` | assigns 5 | <br>
+        | `+=` | `x += 3` | `x = x + 3` | <br>
+        | `-=` | `x -= 3` | `x = x - 3` | <br>
+        | `*=` | `x *= 3` | `x = x * 3` | <br>
+        | `/=` | `x /= 3` | `x = x / 3` | <br>
+        | `%=` | `x %= 3` | `x = x % 3` | <br>
+    </p>
+
+    <script>
+        let a = 10;
+        a += 5;
+        console.log(a);
+
+        a -= 5;
+        console.log(a);
+
+        a *= 5;
+        console.log(a);
+
+        a /= 5;
+        console.log(a);
+
+        a %= 5;
+        console.log(a)
+    </script>
+
+    <h2>3️⃣ Comparison Operators</h2>
+
+    <p>| Operator | Example | Result | <br>
+        | -------- | ----------- | ----------------------------- |
+        | `==` | `5 == "5"` | `true` (only checks value) | <br>
+        | `===` | `5 === "5"` | `false` (checks value & type) | <br>
+        | `!=` | `5 != "5"` | `false` | <br>
+        | `!==` | `5 !== "5"` | `true` | <br>
+        | `>` | `5 > 3` | `true` | <br>
+        | `<` | `5 < 3` | `false` | <br>
+            | `>=` | `5 >= 5` | `true` | <br>
+            | `<=` | `5 <=5` | `true` | </p>
+
+                <script>
+                    let b = 10;
+                    console.log(b == "10");
+                    console.log(b === "10");
+                    console.log(b != "10");
+                    console.log(b !== "10");
+                    console.log(b > 5);
+                    console.log(b < 5);
+                    console.log(b >= 5);
+                    console.log(b <= 5);
+                </script>
+
+                <h2>4️⃣ Logical Operators</h2>
+
+                <p>| Operator | Example | Result | | | | | <br>
+                    | ---------- | --------------- | ------- | ------ | - | ------- | ------ | <br>
+                    | `&&` (AND) | `true && false` | `false` | | | | | <br>
+                    | \` | | \` (OR) | \`true | | false\` | `true` | <br>
+                    | `!` (NOT) | `!true` | `false` | | | | | <br>
+                </p>
+
+                <script>
+                    let age = 20;
+                    console.log(age > 18 && age < 30); // true
+                    console.log(age < 18 || age > 60); // false
+                    console.log(!(age < 18));          // true
+
+                </script>
+
+
+</body>
+
+</html>

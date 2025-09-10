@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Techniques</title>
+</head>
+
+<body>
+    <h1> Position (static, relative, absolute, fixed, sticky)</h1>
+    <style>
+        .pos-container {
+            position: relative;
+            height: 200px;
+            background: #ff0000;
+            margin-bottom: 20px;
+        }
+
+        .static-box {
+            position: static;
+            background: lightblue;
+            padding: 5px;
+        }
+
+        .relative-box {
+            position: relative;
+            top: 10px;
+            left: 20px;
+            background: lightgreen;
+            padding: 5px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: tomato;
+            padding: 5px;
+        }
+
+        .fixed-box {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: gold;
+            padding: 5px;
+            z-index: 1000;
+        }
+
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background: pink;
+            padding: 5px;
+        }
+    </style>
+
+    <div class="sticky-box">Sticky (scroll down to test)</div>
+
+    <div class="pos-container">
+        <div class="static-box">Static</div>
+        <div class="relative-box">Relative</div>
+        <div class="absolute-box">Absolute (inside container)</div>
+    </div>
+
+    <div class="fixed-box">Fixed (always on screen)</div>
+
+    <hr>
+
+    <h1>z-index: Control stacking order</h1>
+    <style>
+        .z-parent {
+            position: relative;
+            height: 100px;
+        }
+
+        .z-box1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background: red;
+            z-index: 1;
+        }
+
+        .z-box2 {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            background: blue;
+            z-index: 2;
+        }
+    </style>
+
+    <div class="z-parent">
+        <div class="z-box1">Z-1</div>
+        <div class="z-box2">Z-2 (on top)</div>
+    </div>
+
+    <hr>
+
+    <h1>Float and Clear</h1>
+
+    <style>
+        .float-box {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background: coral;
+            margin-right: 10px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .float-text {
+            background: #eee;
+            padding: 10px;
+        }
+    </style>
+
+    <div class="clearfix">
+        <div class="float-box">Float</div>
+        <div class="float-text">This text wraps around floated box. Float removed using clearfix.</div>
+    </div>
+
+
+    <hr>
+
+    <h1>Flexbox – All Properties</h1>
+
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            /* row | row-reverse | column | column-reverse */
+            justify-content: space-around;
+            /* flex-start | center | space-between | space-around */
+            align-items: center;
+            /* stretch | center | flex-start | flex-end | baseline */
+            gap: 10px;
+            height: 200px;
+            background: #f0f0f0;
+        }
+
+        .flex-item {
+            background: #8e44ad;
+            color: white;
+            padding: 10px;
+            width: 80px;
+            text-align: center;
+        }
+
+        .grow {
+            flex-grow: 1;
+        }
+
+        .shrink {
+            flex-shrink: 1;
+        }
+
+        .basis {
+            flex-basis: 150px;
+        }
+
+        .align-self {
+            align-self: flex-end;
+        }
+    </style>
+
+    <div class="flex-container">
+        <div class="flex-item grow">Grow</div>
+        <div class="flex-item basis">Basis</div>
+        <div class="flex-item align-self">Align Self</div>
+    </div>
+
+    <hr>
+    <h1>Grid – All Properties</h1>
+    <!-- Grid – All Properties -->
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto;
+            gap: 10px;
+            background: #ecf0f1;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background: #2980b9;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .span-2 {
+            grid-column: span 2;
+        }
+
+        .start-end {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    </style>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item span-2">Span 2 Columns</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item start-end">Start-End Columns</div>
+    </div>
+
+</body>
+
+</html>

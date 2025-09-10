@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 TASK</title>
+</head>
+
+<body>
+    <h1>1️⃣ Change a paragraph’s text with JS</h1>
+
+    <p id="my para">This is the original text.</p>
+    <button onclick="changetext()">change text</button>
+
+    <script>
+        function changetext() {
+            document.getElementById("my para").innerHTML = "the text has been changed";
+        }
+    </script>
+
+    <h1>2️⃣ Hide/Show an element with a button click</h1>
+
+    <p id="message">Hello! You can hide or show me 👋</p>
+    <button onclick="toggleMessage()">Hide/Show</button>
+
+    <script>
+        function toggleMessage() {
+            let msg = document.getElementById("message");
+
+            if (msg.style.display === "none") {
+                msg.style.display = "block";  // show
+            } else {
+                msg.style.display = "none";   // hide
+            }
+        }
+    </script>
+</body>
+
+</html>

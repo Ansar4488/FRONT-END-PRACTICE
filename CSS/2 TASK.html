@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SELECTORS MINI PROJECT</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        #main-title {
+            color: #e74c3c;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        section {
+            margin: 20px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .grouped {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .group2,
+        .group1 {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .descendant-container {
+            color: purple;
+        }
+
+        .child-container>.child-only {
+            color: green;
+            font-weight: bold;
+        }
+
+        .sibling-one+.sibling-two {
+            color: teal;
+        }
+
+        .sibling-start~.sibling-rest {
+            background-color: lightgrey;
+        }
+
+        .input-style {
+            border: 2px dashed blue;
+        }
+
+        .hover-effect:hover {
+            border: 2px solid black;
+            background-color: pink;
+        }
+
+        .pseudo-list li:first-child {
+            color: #e74c3c;
+        }
+
+        .with-before:before {
+            content: "✨ ";
+            color: orange;
+        }
+        .with-after::after{
+            content: " 🎉";
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="main-title">CSS Selector Demo</h1>
+
+    <!-- Element Selector -->
+    <section>
+        <h2>Element Selector</h2>
+        <p class="highlight">This paragraph is styled by a class and the `p` tag selector.</p>
+    </section>
+
+    <!-- Grouped Selectors -->
+    <section>
+        <h2>Grouped Selectors</h2>
+        <div class="group1">Group 1</div>
+        <div class="group2">Group 2</div>
+    </section>
+
+    <!-- Descendant Selector -->
+    <section class="descendant-container">
+        <h2>Descendant Selector</h2>
+        <div>
+            <p class="descendant-text">This is a descendant inside a container.</p>
+        </div>
+    </section>
+
+    <!-- Child Selector -->
+    <section class="child-container">
+        <h2>Child Selector</h2>
+        <p class="child-only">Direct child</p>
+        <div>
+            <p class="child-only">Not a direct child</p>
+        </div>
+    </section>
+
+    <!-- Sibling Selectors -->
+    <section>
+        <h2>Sibling Selectors</h2>
+        <p class="sibling-one">First Element</p>
+        <p class="sibling-two">Styled using adjacent sibling (+)</p>
+        <p class="sibling-start">Base for general sibling</p>
+        <p class="sibling-rest">Styled using general sibling (~)</p>
+        <p class="sibling-rest">Also styled by ~</p>
+    </section>
+
+    <!-- Attribute Selector -->
+    <section>
+        <h2>Attribute Selector</h2>
+        <input class="input-style" type="email" placeholder="Enter email">
+    </section>
+
+    <!-- Pseudo-classes -->
+    <section>
+        <h2>Pseudo-classes</h2>
+        <button class="hover-effect">Hover Me</button>
+        <ul class="pseudo-list">
+            <li>First item</li>
+            <li>Second item</li>
+        </ul>
+    </section>
+
+    <!-- Pseudo-elements -->
+    <section>
+        <h2>Pseudo-elements</h2>
+        <p class="with-before">This has ::before</p>
+        <p class="with-after">This has ::after</p>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of css</title>
+</head>
+
+<body>
+    <!-- CSS Syntax -->
+    <!-- selector {
+  property: value;
+}
+p {
+  color: blue;
+  font-size: 18px;
+} -->
+
+    <!-- Inline, Internal, External CSS -->
+    <!-- Inline (inside an HTML tag) -->
+    <p style="color: red;">Inline styled paragraph</p>
+    <br>
+
+    <!-- Internal (inside <style> tag in <head>) -->
+
+    <h1>ansar</h1>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+    <br>
+
+    <!-- Colors (hex, rgb, rgba, hsl) -->
+    <p>
+        /* HEX */
+        color: #ff5733;
+        <br>
+        /* RGB */
+        color: rgb(255, 87, 51);
+        <br>
+        /* RGBA (with opacity) */
+        color: rgba(255, 87, 51, 0.5);
+        <br>
+        /* HSL */
+        color: hsl(12, 100%, 60%);
+    </p>
+    <br>
+
+    <!-- Units (px, %, em, rem, vw, vh) -->
+    <p>
+        font-size: 16px;
+        <br>
+        width: 80%;
+        <br>
+        padding: 2em;
+        <br>
+        margin: 1rem;
+        <br>
+        height: 50vh; /* 50% of viewport height */
+    </p>
+
+    <!-- Fonts -->
+    <p>
+        font-family: 'Arial', sans-serif;
+        <br>
+        font-size: 20px;
+        <br>
+        line-height: 1.5;
+    </p>
+
+    <!-- Text Styling -->
+    <p>
+        font-weight: bold;
+        <br>
+        font-style: italic;
+        <br>
+        text-decoration: underline;
+        <br>
+        text-transform: uppercase;
+    </p>
+
+    <!-- Box Model -->
+    <p>
+        div { <br>
+        margin: 20px; <br>
+        padding: 15px; <br>
+        border: 2px solid black; <br>
+        width: 300px; <br>
+        height: 100px; <br>
+        }
+    </p>
+
+    <!-- Display -->
+    <p>
+        display: block; /* starts on new line */ <br>
+        display: inline; /* flows with text */ <br>
+        display: inline-block; /* inline + supports box model */ <br>
+    </p>
+
+    <!-- Borders -->
+    <p>
+        border: 2px solid red; <br>
+        border-radius: 10px; <br>
+        border-style: dashed;<br>
+    </p>
+
+    <!-- Background -->
+    <p>
+        background-image: url('image.jpg'); <br>
+        background-repeat: no-repeat; <br>
+        background-size: cover; <br>
+        background-position: center; <br>
+    </p>
+
+    <!-- Overflow -->
+    <p>
+        overflow: hidden;
+        overflow-x: scroll;
+        overflow-y: auto;
+    </p>
+
+    
+</body>
+
+</html>

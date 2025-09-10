@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORS</title>
+</head>
+
+<body>
+    <!-- 1. Universal Selector * -->
+    <style>
+        * {
+            font-family: Arial;
+        }
+    </style>
+    <p class="universal">This is affected by universal selector.</p>
+
+    <!-- 2. Element Selector (e.g., p, div) -->
+    <style>
+        p {
+            color: green;
+        }
+    </style>
+    <p class="element">Element selector applied to paragraph.</p>
+
+    <!-- 3. Class Selector (.className) -->
+    <style>
+        .class-selector {
+            color: blue;
+        }
+    </style>
+    <p class="class-selector">This uses a class selector.</p>
+
+    <!-- 4. ID Selector (#idName) -->
+    <style>
+        #unique-id {
+            color: red;
+        }
+    </style>
+    <p class="id-selector" id="unique-id">This uses an ID selector.</p>
+
+    <!-- 5. Grouped Selectors (selector1, selector2) -->
+    <style>
+        .group1,
+        .group2 {
+            background: yellow;
+        }
+    </style>
+    <p class="group1">Grouped selector 1</p>
+    <div class="group2">Grouped selector 2</div>
+
+    <!-- Descendant Selector (parent child) -->
+    <style>
+        .outer .inner {
+            color: purple;
+        }
+    </style>
+    <div class="outer">
+        <p class="inner">Descendant selector (div → p)</p>
+    </div>
+
+    <!-- 7. Child Selector (parent > child) -->
+    <style>
+        .parent>.child {
+            color: darkorange;
+        }
+    </style>
+    <div class="parent">
+        <p class="child">Direct child selector</p>
+        <div>
+            <p class="child">Not direct child</p>
+        </div>
+    </div>
+
+    <!-- 8. Sibling Selectors -->
+    ➕ Adjacent Sibling (+)
+    <style>
+        .first+.second {
+            color: teal;
+        }
+    </style>
+    <p class="first">First paragraph</p>
+    <p class="second">Styled only if immediately after .first</p>
+    ➰ General Sibling (~)
+    <style>
+        .one~.two {
+            color: brown;
+        }
+    </style>
+    <p class="one">Sibling base</p>
+    <div></div>
+    <p class="two">Styled if after .one anywhere</p>
+
+    <!-- 9. Attribute Selectors -->
+    <style>
+        .attr-box[type="text"] {
+            border: 2px solid green;
+        }
+    </style>
+    <input class="attr-box" type="text" placeholder="Type here">
+
+    <!-- 10. Pseudo-classes (:hover, :first-child, etc.) -->
+    <style>
+        .hover-box:hover {
+            background-color: lightblue;
+        }
+
+        .list-item:first-child {
+            color: crimson;
+        }
+    </style>
+
+    <div class="hover-box">Hover over me</div>
+    <ul>
+        <li class="list-item">First item</li>
+        <li class="list-item">Second item</li>
+    </ul>
+
+    <!-- 11. Pseudo-elements (::before, ::after) -->
+    <style>
+        .pseudo::before {
+            content: "👉 ";
+            color: green;
+        }
+
+        .pseudo::after {
+            content: " ✅";
+            color: red;
+        }
+    </style>
+
+    <p class="pseudo">Pseudo-elements add content</p>
+
+
+</body>
+
+</html>

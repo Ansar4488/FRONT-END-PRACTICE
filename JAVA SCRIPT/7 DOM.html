@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1>7️⃣ DOM Manipulation in JavaScript <br>
+        👉 DOM (Document Object Model) = a tree-like structure of your HTML. <br>
+        👉 JavaScript can select, change, add, or remove elements in the DOM.
+    </h1>
+
+    <h1>1️⃣ Select Elements</h1>
+    <p id="demo">By ID</p>
+    <p class="myclass">class</p>
+    <p>paragraph</p>
+    <script>
+        let para = document.getElementById("demo")
+        console.log(para.innerHTML)
+    </script>
+
+    <h1>With querySelector (first match)</h1>
+
+    <script>
+        let firstpara = document.querySelector("p")
+        let byclass = document.querySelector(".myclass")
+        let byid = document.getElementById("demo")  // ✅ fixed
+
+        console.log(firstpara.innerHTML)
+        console.log(byclass.innerHTML)
+        console.log(byid.innerHTML)
+    </script>
+
+    <h1>With querySelectorAll (all matches → NodeList)</h1>
+
+    <script>
+        let allparh = document.querySelectorAll("p")
+        allparh.forEach(p => console.log(p.innerHTML))
+    </script>
+
+    <h1>2️⃣ Change Text</h1>
+
+    <p id="original">Original text</p>
+
+    <script>
+        let p = document.getElementById("original");  // ✅ fixed
+
+        p.innerText = "Changed with innerText";  // plain text only
+        p.innerHTML = "<b>Changed with innerHTML</b>"; // can include HTML
+    </script>
+
+    <h1>3️⃣ Change Style</h1>
+    <p id="styled">Styled text</p>
+
+    <script>
+        let styledPara = document.getElementById("styled"); // ✅ better variable name
+        styledPara.style.color = "red";
+        styledPara.style.fontSize = "20px";
+    </script>
+
+    <h1>4️⃣ Add / Remove Classes</h1>
+
+    <p id="add" class="text">Hello</p>
+
+    <script>
+        let addPara = document.getElementById("add"); // ✅ better variable name
+
+        addPara.classList.add("highlight");   // add a class
+        addPara.classList.remove("text");     // remove a class
+        addPara.classList.toggle("active");   // toggle on/off
+    </script>
+
+    <h1>5️⃣ Add / Remove Elements</h1>
+
+    <div id="container"></div>
+
+    <script>
+        let container = document.getElementById("container");
+
+        // Create new element
+        let newPara = document.createElement("p");
+        newPara.innerText = "I'm a new paragraph!";
+        container.appendChild(newPara);  // add inside div
+
+        // Remove element
+        container.removeChild(newPara);
+    </script>
+
+</body>
+
+</html>

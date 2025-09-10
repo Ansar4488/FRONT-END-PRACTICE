@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <h1>6️⃣ Objects in JavaScript <br>
+        👉 An object is a collection of key–value pairs. <br>
+        👉 Keys (also called properties) are usually strings, and values can be any data type (numbers, strings, arrays,
+        <br>
+        functions, even other objects).
+    </h1>
+
+    <h1>1️⃣ Create an Object</h1>
+
+    <script>
+        let person = {
+            name: "ansar",
+            age: 21,
+            gender: "male",
+            isStudent: true
+        }
+    </script>
+
+    <h1>2️⃣ Access Object Properties</h1>
+    <P>Dot Notation</P>
+
+    <script>
+        console.log("name: ", person.name)
+        console.log(person.age);
+    </script>
+
+    <h1>Bracket Notation <br>
+        👉 Useful when the key is dynamic or has spaces.</h1>
+
+    <script>
+        console.log(person["isStudent"])
+
+        let key = "name";
+        console.log(person[key])
+    </script>
+
+    <h1>3️⃣ Object Methods
+        <br>
+        👉 A method is a function stored inside an object.
+    </h1>
+
+    <script>
+        let car = {
+            brand: "bmw",
+            model: "model 3",
+            start: function () {
+                console.log("car started")
+            }
+        }
+        car.start()
+    </script>
+
+    <h1>4️⃣ this Keyword <br>
+        👉 Inside an object’s method, this refers to the object itself.</h1>
+
+    <script>
+        let user = {
+            name: "ansar",
+            greet: function () {
+                console.log("Hello, My name is " + this.name)
+            }
+        }
+        user.greet()
+    </script>
+
+    <h1>5️⃣ Object Destructuring <br>
+        👉 Extract properties into variables quickly.</h1>
+
+    <script>
+        let people = {
+            name: "ansar",
+            age: 21,
+            city: "chennai"
+        };
+
+        let { name, age, city: location } = people;
+
+        console.log(name)
+        console.log(age)
+        console.log(location)
+    </script>
+</body>
+
+</html>

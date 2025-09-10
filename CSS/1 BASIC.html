@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASIC OF CSS</title>
+    <link rel="stylesheet" href="./1 BASIC.css">
+</head>
+
+<body>
+
+    <!-- 1. CSS Syntax -->
+    <style>
+        .my-text {
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
+
+    <p class="my-text">This is styled text.</p>
+    <hr>
+
+    <!-- 2. Inline, Internal, External CSS -->
+
+    <p style="color: red;">Inline CSS</p>
+    <hr>
+
+    <style>
+        .internal-style {
+            color: green;
+        }
+    </style>
+    <p class="internal-style">Internal CSS</p>
+    <hr>
+
+    <p class="external-style">External CSS</p>
+    <hr>
+
+    <!-- 3. Colors (hex, rgb, rgba, hsl) -->
+
+    <style>
+        .hex-color {
+            color: #3498db;
+        }
+
+        .rgb-color {
+            color: rgb(255, 99, 71);
+        }
+
+        .rgba-color {
+            color: rgba(255, 99, 71, 0.5);
+        }
+
+        .hsl-color {
+            color: hsl(120, 100%, 25%);
+        }
+    </style>
+
+    <p class="hex-color">Hex Color</p>
+    <p class="rgb-color">RGB Color</p>
+    <p class="rgba-color">RGBA Color</p>
+    <p class="hsl-color">HSL Color</p>
+    <hr>
+
+    <!-- 4. Units (px, %, em, rem, vw, vh) -->
+
+    <style>
+        .px-box {
+            width: 200px;
+            height: 50px;
+            background: lightblue;
+        }
+
+        .percent-box {
+            width: 50%;
+            height: 50px;
+            background: lightgreen;
+        }
+
+        .em-text {
+            font-size: 2em;
+        }
+
+        .rem-text {
+            font-size: 2rem;
+        }
+
+        .vw-box {
+            width: 50vw;
+            background: orange;
+        }
+
+        .vh-box {
+            height: 20vh;
+            background: coral;
+        }
+    </style>
+
+    <div class="px-box">200px Width</div>
+    <div class="percent-box">50% Width</div>
+    <p class="em-text">2em Text</p>
+    <p class="rem-text">2rem Text</p>
+    <div class="vw-box">50vw Width</div>
+    <div class="vh-box">20vh Height</div>
+
+    <!-- 5. Fonts (font-family, font-size, line-height) -->
+
+    <style>
+        .font-example {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+
+    <p class="font-example">This text uses font settings.</p>
+
+    <!-- 6. Text Styling -->
+
+    <style>
+        .bold-text {
+            font-weight: bold;
+        }
+
+        .italic-text {
+            font-style: italic;
+        }
+
+        .underline-text {
+            text-decoration: underline;
+        }
+
+        .uppercase-text {
+            text-transform: uppercase;
+        }
+    </style>
+
+    <p class="bold-text">Bold Text</p>
+    <p class="italic-text">Italic Text</p>
+    <p class="underline-text">Underline Text</p>
+    <p class="uppercase-text">Uppercase Text</p>
+
+    <!-- 7. Box Model (margin, border, padding, width, height) -->
+
+    <style>
+        .box-model {
+            margin: 20px;
+            border: 2px solid black;
+            padding: 10px;
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+        }
+
+        .box-model1 {
+            background-color: lightslategray;
+            margin: 20px;
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid black;
+            font-family: fantasy;
+        }
+    </style>
+
+    <div class="box-model">Box Model Example</div>
+    <div class="box-model1">Box Model Example</div>
+
+    <!-- 8. Display: block, inline, inline-block -->
+    <style>
+        .block {
+            display: block;
+            background: pink;
+        }
+
+        .inline {
+            display: inline;
+            background: lightblue;
+        }
+
+        .inline-block {
+            display: inline-block;
+            background: lightgreen;
+            width: 100px;
+        }
+    </style>
+
+    <span class="block">Block</span>
+    <span class="inline">Inline</span>
+    <span class="inline-block">Inline-block</span>
+
+    <!-- 9. Borders (border-radius, border-style) -->
+    <style>
+        .border-example {
+            border: 2px dashed blue;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+
+    <div class="border-example">Dashed Border with Rounded Corners</div>
+
+    <!-- 10. Background (image, repeat, size, position) -->
+    <style>
+        .bg-example {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 200px;
+            height: 150px;
+            display: inline-block;
+        }
+    </style>
+
+    <div class="bg-example"> <img src="/HTML/IMAGES/W3.png" alt="#"></div>
+
+    <!-- 11. Overflow (overflow-x, overflow-y) -->
+    <style>
+        .overflow-box {
+            width: 200px;
+            height: 100px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            border: 1px solid black;
+        }
+    </style>
+
+    <div class="overflow-box">
+        This is a very long content that will overflow horizontally but not vertically.
+    </div>
+
+</body>
+
+</html>

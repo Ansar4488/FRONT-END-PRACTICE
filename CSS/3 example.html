@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Layout Techniques Practice</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    /* 🔷 HEADER (Position: sticky) */
+    .header {
+      background: #333;
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header h1 {
+      margin: 0;
+    }
+
+    /* 🔷 SIDEBAR + CONTENT WRAPPER (Flexbox Layout) */
+    .main-layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 200px;
+      background: #444;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+      background: #fff;
+    }
+
+    /* 🔷 FLOAT + CLEAR */
+    .float-section {
+      margin-top: 20px;
+    }
+
+    .float-box {
+      float: left;
+      width: 100px;
+      height: 100px;
+      background: coral;
+      margin-right: 10px;
+    }
+
+    .float-text::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    /* 🔷 POSITION DEMO */
+    .position-demo {
+      position: relative;
+      margin-top: 40px;
+      background: #eee;
+      height: 150px;
+      border: 1px solid #ccc;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: tomato;
+      padding: 5px;
+    }
+
+    .relative-box {
+      position: relative;
+      top: 10px;
+      left: 10px;
+      background: lightgreen;
+      padding: 5px;
+    }
+
+    /* 🔷 Z-INDEX */
+    .z-stack {
+      position: relative;
+      height: 100px;
+      margin-top: 40px;
+    }
+
+    .z1, .z2 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 0;
+      left: 0;
+    }
+
+    .z1 {
+      background: red;
+      z-index: 1;
+    }
+
+    .z2 {
+      background: blue;
+      z-index: 2;
+      left: 30px;
+      top: 30px;
+    }
+
+    /* 🔷 FLEXBOX ALL */
+    .flexbox-demo {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 10px;
+      margin-top: 40px;
+      background: #e0f7fa;
+      padding: 10px;
+    }
+
+    .flex-item {
+      background: teal;
+      color: white;
+      padding: 15px;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    /* 🔷 GRID ALL */
+    .grid-demo {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+      margin-top: 40px;
+      background: #f0f4c3;
+      padding: 10px;
+    }
+
+    .grid-item {
+      background: #689f38;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .span2 {
+      grid-column: span 2;
+    }
+
+    /* 🔷 FOOTER (Position: fixed) */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      z-index: 99;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <div class="header">
+    <h1>CSS Layout Techniques</h1>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="main-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul>
+        <li>Position</li>
+        <li>Float</li>
+        <li>Flexbox</li>
+        <li>Grid</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      
+      <h2>Float + Clear Example</h2>
+      <div class="float-section">
+        <div class="float-box">Float</div>
+        <div class="float-text">
+          This text wraps around the floated box. We use clearfix to avoid layout breaking.
+        </div>
+      </div>
+
+      <h2>Positioning</h2>
+      <div class="position-demo">
+        <div class="absolute-box">Absolute</div>
+        <div class="relative-box">Relative</div>
+      </div>
+
+      <h2>Z-Index Stacking</h2>
+      <div class="z-stack">
+        <div class="z1">Z-1</div>
+        <div class="z2">Z-2</div>
+      </div>
+
+      <h2>Flexbox Layout</h2>
+      <div class="flexbox-demo">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+
+      <h2>Grid Layout</h2>
+      <div class="grid-demo">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item span2">Span 2 Columns</div>
+        <div class="grid-item">4</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Fixed Footer -->
+  <div class="footer">
+    Fixed Footer - Scroll to see me stay here
+  </div>
+
+</body>
+</html>

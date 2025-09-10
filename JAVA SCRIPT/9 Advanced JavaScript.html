@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript Topics</title>
+</head>
+
+<body>
+    <H1>9️⃣ Advanced JavaScript Topics</H1>
+
+    <H1>1️⃣ ES6 Features</H1>
+
+    <P>
+        (a) let & const <br>
+        let → block-scoped, re-assignable <br>
+        const → block-scoped, cannot be re-assigned
+    </P>
+
+    <script>
+        let age = 21;
+        const pei = 3.14;
+    </script>
+
+    <p>
+        (b) Arrow Functions <br>
+        👉 Shorter syntax for functions.
+    </p>
+
+    <script>
+        const add = (a, b) => a + b;
+        console.log("added:", 10 + 10)
+    </script>
+
+    <h1>(c) Template Literals</h1>
+
+    <p>👉 Use backticks (`) for string interpolation & multi-line strings.</p>
+
+    <script>
+        let name = "ansar";
+        console.log(`Hello, my name is ${name}`)
+    </script>
+
+    <H1>(d) Destructuring</H1>
+
+    <P>👉 Extract values from arrays/objects easily.</P>
+
+    <script>
+        let person = {
+            names: "ansar",
+            ages: 21
+        };
+
+        let { names, ages } = person;
+
+        console.log(name, age)
+    </script>
+
+    <H1>2️⃣ Spread & Rest Operators</H1>
+
+    <P>👉 Both use ... but behave differently. <br>
+        Spread → expands values
+    </P>
+
+    <script> 
+        let arr1 = [1, 2, 3];
+        let arr2 = [...arr1, 4, 5];
+        console.log(arr2); // [1,2,3,4,5] concat
+    </script>
+
+    <P>Rest → collects values into an array</P>
+
+    <SCript>
+        function sum(...nums) {
+            return nums.reduce((acc, n) => acc + n, 0);
+        }
+        console.log(sum(1, 2, 3, 4)); // 10
+
+    </SCript>
+
+    <H1>3️⃣ Default Parameters</H1>
+
+    <P>👉 Set default values if no argument is passed.</P>
+
+    <script>
+        function greet(name = "Guest") {
+            console.log(`Hello, ${name}`);
+        }
+        greet();        // Hello, Guest
+        greet("Ansar"); // Hello, Ansar
+    </script>
+
+    <H1>4️⃣ Promises</H1>
+
+    <P>👉 Handle async operations (like API calls).</P>
+
+    <script>
+        let myPromise = new Promise((resolve, reject) => {
+            let success = true;
+            if (success) {
+                resolve("Operation successful!");
+            } else {
+                reject("Something went wrong.");
+            }
+        });
+
+        myPromise
+            .then(result => console.log(result))
+            .catch(error => console.log(error));
+    </script>
+
+    <H1>5️⃣ Async/Await</H1>
+
+    <P>👉 Cleaner way to work with promises.</P>
+
+    <script>
+        function getData() {
+            return new Promise(resolve => {
+                setTimeout(() => resolve("Data received"), 2000);
+            });
+        }
+
+        async function fetchData() {
+            console.log("Fetching...");
+            let data = await getData();
+            console.log(data);
+        }
+
+        fetchData();
+        // Output:
+        // Fetching...
+        // (after 2s) Data received
+
+    </script>
+
+    <H1>6️⃣ Fetch API</H1>
+
+    <P>👉 Used to make HTTP requests.</P>
+
+    <SCript>
+        fetch("https://jsonplaceholder.typicode.com/posts/1")
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.log("Error:", error));
+    </SCript>
+
+    <H1>With Async/Await:</H1>
+
+    <script>
+        async function loadPost() {
+            try {
+                let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+                let data = await response.json();
+                console.log(data);
+            } catch (error) {
+                console.log("Error:", error);
+            }
+        }
+        loadPost();
+    </script>
+</body>
+
+</html>

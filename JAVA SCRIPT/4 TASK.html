@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 4</title>
+</head>
+
+<body>
+    <h1>👉 Write a function to add 2 numbers</h1>
+
+    <script>
+        function addnumbers(a, b) {
+            return a + b;
+        }
+        console.log("SUM:", addnumbers(5, 7));
+    </script>
+
+    <h1>👉 Write a function to convert Celsius to Fahrenheit</h1>
+
+    <script>
+        function celsiustofahrenheit(Celsius){
+            return (Celsius * 9/5) + 32
+        }
+
+        console.log("25 C in fahrenheit:", celsiustofahrenheit(25))
+    </script>
+
+    <h1>Write a function to multiply 3 numbers.</h1>
+
+    <script>
+        function multiplynum(a, b, c){
+            return (a * b * c)
+        }
+        console.log("MULTIPLY:",multiplynum(5 , 5, 5))
+    </script>
+
+    <h1>Write a function to check if a number is positive, negative, or zero.</h1>
+
+    <script>
+        function checknumber(num){
+            if (num > 0){
+                return (num + " is positive")
+            }
+            else if(num < 0){
+                return (num + " is negaive")
+            }
+            else {
+                return ( num + " is zero")
+            }
+        }
+
+        console.log(checknumber(10))
+        console.log(checknumber(-5))
+        console.log(checknumber(0))
+    </script>
+</body>
+
+</html>

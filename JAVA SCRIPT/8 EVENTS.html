@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS</title>
+</head>
+
+<body>
+    <h1>8️⃣ Events in JavaScript <br>
+        👉 An event is an action that happens in the browser (e.g., click, key press, form submit). <br>
+        👉 JavaScript can listen for events and run code in response.</h1>
+
+    <h1>1️⃣ Event Types</h1>
+
+    <P>| Event | Trigger |
+        | ----------- | ------------------------------------- |
+        | `click` | When the user clicks an element |
+        | `mouseover` | When the mouse hovers over an element |
+        | `keydown` | When a key is pressed |
+        | `submit` | When a form is submitted |
+        | `change` | When an input value changes |
+    </P>
+
+    <H1>2️⃣ Add Event Listener</H1>
+
+    <P>👉 Best practice = use addEventListener instead of inline onclick.</P>
+
+    <button id="btn">CLICK ME</button>
+
+    <script>
+        let btn = document.getElementById("btn")
+
+        btn.addEventListener("click", function () {
+            console.log("button clicked")
+        });
+    </script>
+
+    <H1>3️⃣ Event Object</H1>
+
+    <P>👉 The event object (e or event) contains info about the event.</P>
+
+    <input type="text" id="nameinput" placeholder="write something...">
+
+    <script>
+        let input = document.getElementById("nameinput")
+
+        input.addEventListener("keydown", function (e) {
+            console.log("key pressed:", e.key)
+        })
+    </script>
+
+    <P>Another Example (Mouseover with event.target)</P>
+
+    <p id="para">Hover mouse me!</p>
+
+    <script>
+        let para = document.getElementById("para")
+
+        para.addEventListener("mouseover", function (e) {
+            e.target.style.color = "red";
+        })
+    </script>
+
+    <H1>submit Event</H1>
+
+    <P>👉 Fired when a form is submitted. <br>
+        👉 Usually used to validate form data before sending.
+    </P>
+
+    <form id="myform">
+        <input type="text" id="username" placeholder="enter username">
+        <button id="submit">submit</button>
+    </form>
+
+    <script>
+        let form = document.getElementById("myform")
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let username = document.getElementById("username").value;
+            console.log("form submited with username:", username)
+
+        })
+    </script>
+
+    <H1>change Event</H1>
+
+    <P>👉 Fired when the value of an input or select changes (and you leave the field).</P>
+
+    <input type="text" id="nameinputs" placeholder="type youre name">
+
+    <script>
+        let name = document.getElementById("nameinputs")
+
+        name.addEventListener("change", function () {
+            console.log("New value:", name.value)
+        })
+    </script>
+
+
+    <H1>Example with dropdown (select):</H1>
+
+    <select id="cityselect">
+        <option value="chennai">chennai</option>
+        <option value="bangalore">bangalore</option>
+        <option value="coimbatore">coimbatore</option>
+    </select>
+
+    <script>
+        let city = document.getElementById("cityselect")
+
+        city.addEventListener("change", function () {
+            console.log("selected city:", cityselect.value)
+        })
+    </script>
+</body>
+
+</html>

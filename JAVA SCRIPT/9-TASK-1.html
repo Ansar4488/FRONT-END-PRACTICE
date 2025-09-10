@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fetch API Example with Promises</title>
+</head>
+
+<body>
+  <h2>Posts from API</h2>
+  <button onclick="loadPosts()">Load Posts</button>
+  <ul id="postList"></ul>
+
+  <script>
+    function loadPosts() {
+      fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
+        .then(response => response.json())
+        .then(posts => {
+          let list = document.getElementById("postList");
+          list.innerHTML = ""; // clear before adding
+
+          posts.forEach(post => {
+            let li = document.createElement("li");
+            li.textContent = post.title;
+            list.appendChild(li);
+          });
+        })
+        .catch(error => console.error("Error loading posts:", error));
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK</title>
+</head>
+
+<body>
+    <H1>1️⃣ Alert when button clicked</H1>
+
+    <button onclick="show()">CLICK ME</button>
+
+    <script>
+        function show() {
+            alert("button was clicked")
+        }
+    </script>
+
+    <H1>2️⃣ Change background color on mouseover</H1>
+
+    <div id="colorbox" style="width: 100px; height: 100px; background-color: red; color: white; padding: 2px;">Hover
+        over me</div>
+
+    <script>
+        let box = document.getElementById("colorbox");
+
+        box.addEventListener("mouseover", function () {
+            box.style.backgroundColor = "black";
+            box.style.color = "white"
+        })
+
+        box.addEventListener("mouseout", function () {
+            box.style.background = "green";
+            box.style.color = "black"
+        })
+    </script>
+
+    <H1>3️⃣ Capture form submit and prevent default</H1>
+
+    <form id="submit">
+        <input type="text" name="username" id="username" placeholder="enter youre name" required>
+        <button>submit</button>
+    </form>
+
+    <script>
+        let form = document.getElementById("submit");
+        let input = document.getElementById("username")
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            console.log(input.value)
+            alert("form submitted successfully")
+        })
+    </script>
+</body>
+
+</html>

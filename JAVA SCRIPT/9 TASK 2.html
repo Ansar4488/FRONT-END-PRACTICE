@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <h2>My To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        function saveTaskToServer(task) {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve(task);
+                }, 500); // fake delay 0.5 sec
+            });
+        }
+
+        async function addTask() {
+            let input = document.getElementById("taskInput");
+            let task = input.value.trim();
+
+            if (task === "") return;
+
+            let savedTask = await saveTaskToServer(task);
+
+            let li = document.createElement("li");
+            li.textContent = savedTask;
+            document.getElementById("taskList").appendChild(li);
+
+            input.value = "";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 TASK</title>
+</head>
+
+<body>
+    <H1>👉 Create a student object with name, age, grades</H1>
+
+    <script>
+        let students = {
+            name: "ansar",
+            age: "21",
+            grades: [85, 90, 78, 92, 88]
+        }
+        console.log(students)
+    </script>
+
+    <h1>2️⃣ Add a Method to Calculate Average Grade</h1>
+
+    <script>
+        let student = {
+            name: "Ali",
+            age: 20,
+            course: "Computer Science",
+            grades: [85, 90, 78, 92, 88],
+
+            // Method to calculate average using for loop
+            getAverage: function () {
+                let sum = 0;
+                for (let i = 0; i < this.grades.length; i++) {
+                    sum += this.grades[i];
+                }
+                return sum / this.grades.length;
+            },
+
+            // Method to check if passed
+            isPassed: function () {
+                let average = this.getAverage();
+                if (average >= 50) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        };
+
+        console.log("Student Name:", student.name);
+        console.log("Course:", student.course);
+        console.log("Grades:", student.grades);
+        console.log("Average Grade:", student.getAverage());
+        console.log("Passed?:", student.isPassed());
+
+    </script>
+</body>
+
+</html>

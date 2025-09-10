@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 3</title>
+</head>
+
+<body>
+    <h1>1️⃣ Print numbers 1–10</h1>
+
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            console.log(i)
+        }
+    </script>
+
+    <h1>2️⃣ Check if a number is odd or even</h1>
+
+    <script>
+        let num = 7;
+
+        if (num % 2 === 0) {
+            console.log(num + " is Even");
+        } else {
+            console.log(num + " is Odd");
+        }
+
+    </script>
+
+    <h1>3️⃣ Build a simple calculator <br>
+        We’ll use a switch statement for operations:</h1>
+
+    <script>
+        let a = 20;
+        let b = 10;
+        let Operator = "+";
+        
+        switch (Operator) {
+            case "+":
+                console.log("result:", a + b);
+                break;
+            case "-":
+                console.log("result:", a - b);
+                break;
+            case "/":
+                console.log("result:", a / b);
+                break;
+            case "*":
+                console.log("result:", a * b);
+                break;
+            default:
+                console.log("Invalid operator");
+        }
+    </script>
+</body>
+
+</html>

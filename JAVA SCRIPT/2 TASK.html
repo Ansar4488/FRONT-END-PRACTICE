@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 TASK</title>
+</head>
+
+<body>
+    <H1>1️⃣ Simple Math Operations</H1>
+
+    <script>
+        let a = 10;
+        let b = 3;
+
+        console.log("Addition:", a + b);      // 13
+        console.log("Subtraction:", a - b);   // 7
+        console.log("Multiplication:", a * b); // 30
+        console.log("Division:", a / b);      // 3.333...
+        console.log("Modulus:", a % b);       // 1 (remainder)
+        console.log("Power:", a ** b);        // 1000 (10³)
+
+    </script>
+
+    <h1>2️⃣ Check Conditions with Logical Operators</h1>
+
+    <script>
+        let x = 5;
+        let y = 10;
+
+        // AND (&&)
+        console.log(x > 0 && y > 0);   // true (both positive)
+
+        // OR (||)
+        console.log(x > 10 || y > 5);  // true (y > 5 is true)
+
+        // NOT (!)
+        console.log(!(x > y));         // true (since x > y is false, ! makes it true)
+
+    </script>
+
+    <h1>Write a program to check if a number is positive and even.</h1>
+
+    <script>
+        let num = 12;
+
+        if (num > 0 && num % 2 === 0) {
+            console.log(num + " is positive and even");
+        } else {
+            console.log(num + " is NOT positive and even");
+        }
+    </script>
+
+    <h1>Write a program to check if your age is between 18 and 30.</h1>
+    
+    <script>
+        let age = 18;
+
+        if (age >= 18 && age <= 30) {
+            console.log("age " + age + " is between 18 and 30")
+        }
+        else {
+            console.log("age " + age + " is not between 18 and 30")
+        }
+    </script>
+
+    <h1>Use || to check if a person is eligible for discount if they are a student OR age < 18.</h1>
+
+    <script>
+        let student = false;
+        let personage = 16;
+
+        if (student || personage < 18) {
+            console.log("eligible for discount")
+        }
+        else {
+            console.log("not eligible for discount")
+        }
+    </script>
+</body>
+
+</html>

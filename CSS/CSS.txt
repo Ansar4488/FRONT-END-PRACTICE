@@ -1,0 +1,237 @@
+You're right! Just like I gave you HTML exercises with practical tags and tasks, you also need the same for CSS — not just a roadmap but real, structured practice.
+
+Here it is:
+
+🎯 Full CSS Practice Guide — Topic-Wise Exercises + Tag/Property Practice
+You can follow this like a mini course.
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ 1. CSS Setup Practice
+
+* [ ] Create a basic HTML page
+* [ ] Add Inline CSS (style inside tag)
+* [ ] Add Internal CSS (`<style>` inside `<head>`)
+* [ ] Add External CSS file and link with `<link>`
+
+🎯 Task: Create a “Hello Page” and change the text color to blue using all 3 methods.
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ 2. Colors & Background
+
+🧪 Properties:
+
+* color
+* background-color
+* background-image
+* background-repeat
+* background-position
+* background-size
+
+🎯 Tasks:
+
+* [ ] Set background color of the page
+* [ ] Add an image background to a div
+* [ ] Set background image to cover the entire page
+* [ ] Add a gradient background using linear-gradient()
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ 3. Fonts & Text Styling
+
+🧪 Properties:
+
+* font-family
+* font-size
+* font-style
+* font-weight
+* text-align
+* text-transform
+* letter-spacing
+* line-height
+
+🎯 Tasks:
+
+* [ ] Set font to Arial for the whole page
+* [ ] Center a heading
+* [ ] Make a paragraph bold and uppercase
+* [ ] Add spacing between letters
+* [ ] Set line height of 2 for a paragraph
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ 4. Box Model Practice
+
+🧪 Properties:
+
+* margin
+* padding
+* border
+* width / height
+* box-sizing
+
+🎯 Tasks:
+
+* [ ] Create a box with 200x200px size
+* [ ] Add 20px padding and red border
+* [ ] Add margin between two boxes
+* [ ] Change box-sizing to border-box
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ 5. Display, Visibility & Overflow
+
+🧪 Properties:
+
+* display: block, inline, inline-block, none, flex
+* visibility: hidden / visible
+* overflow: hidden / scroll / auto
+
+🎯 Tasks:
+
+* [ ] Make 3 inline-block cards
+* [ ] Hide an element with display: none
+* [ ] Scroll content inside a box using overflow: auto
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ 6. Positioning & Z-index
+
+🧪 Properties:
+
+* position: static, relative, absolute, fixed, sticky
+* top, left, right, bottom
+* z-index
+
+🎯 Tasks:
+
+* [ ] Place one box over another using position: absolute
+* [ ] Make a sticky navbar on scroll
+* [ ] Fix a button to bottom-right corner
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ 7. Flexbox Practice
+
+🧪 Properties:
+
+* display: flex
+* flex-direction
+* justify-content
+* align-items
+* gap
+* flex-wrap
+
+🎯 Tasks:
+
+* [ ] Create a row of 3 cards with equal width
+* [ ] Center a div horizontally & vertically
+* [ ] Create a responsive layout with wrap
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ 8. Grid Practice
+
+🧪 Properties:
+
+* display: grid
+* grid-template-columns / rows
+* gap
+* grid-area
+* place-items
+
+🎯 Tasks:
+
+* [ ] Create a 3x2 grid layout
+* [ ] Place one div to span 2 columns
+* [ ] Center items in a grid
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ 9. Pseudo-classes & Pseudo-elements
+
+🧪 Examples:
+
+* \:hover, \:focus, \:active, \:nth-child()
+* \::before, ::after, ::first-letter
+
+🎯 Tasks:
+
+* [ ] Create hover effect for a button
+* [ ] Highlight first letter of a paragraph
+* [ ] Add a “\*” before required form fields
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ 10. Transitions & Animations
+
+🧪 Properties:
+
+* transition
+* transform: scale, rotate, translate
+* animation, @keyframes
+
+🎯 Tasks:
+
+* [ ] Add hover transition to button
+* [ ] Create a loading spinner animation
+* [ ] Animate a box moving left to right
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ 11. Media Queries (Responsive Design)
+
+🧪 Syntax:
+@media screen and (max-width: 768px) { ... }
+
+🎯 Tasks:
+
+* [ ] Change layout to column on mobile
+* [ ] Make font smaller on small screens
+* [ ] Hide an image on mobile
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ 12. Real Practice Mini Projects (CSS Focus)
+
+1. Profile Card
+   → Circle image, name, bio, follow button
+
+2. Responsive Navbar
+   → Flex layout, logo, links, mobile responsive
+
+3. Product Card
+   → Image, price, name, hover effect
+
+4. Pricing Table
+   → 3 columns with different features
+
+5. Landing Page
+   → Hero image, call to action button, background gradient
+
+6. Login Form
+   → Form with styled inputs, submit button
+
+━━━━━━━━━━━━━━━━━━━
+
+✅ Final Checklist (Mark ✓)
+
+* [ ] Fonts and text styling
+* [ ] Box model
+* [ ] Positioning
+* [ ] Flexbox
+* [ ] Grid
+* [ ] Responsive design
+* [ ] Transitions/animations
+* [ ] Forms and buttons
+* [ ] Media queries
+
+━━━━━━━━━━━━━━━━━━━
+
+If you want, I can give you:
+
+✅ A full downloadable “CSS Practice Workbook” (HTML+CSS ready templates)
+✅ Or live editable examples on CodePen
+
+Just say “YES CSS WORKBOOK” or “YES CODEPEN EXAMPLES” — I’ll prepare them for you! 🎁

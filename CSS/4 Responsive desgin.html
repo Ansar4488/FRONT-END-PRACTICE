@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive desgin</title>
+</head>
+
+<body>
+
+    <h1>Media Queries</h1>
+    <style>
+        .responsive-box {
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        /* Media Query for tablets */
+        @media (max-width: 768px) {
+            .responsive-box {
+                background: #2ecc71;
+                font-size: 20px;
+            }
+        }
+
+        /* Media Query for mobile */
+        @media (max-width: 480px) {
+            .responsive-box {
+                background: #e74c3c;
+                font-size: 16px;
+            }
+        }
+    </style>
+
+    <div class="responsive-box">Resize the browser to see color/font-size change</div>
+    <hr>
+
+    <h1>Responsive Images</h1>
+
+    <style>
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid black;
+            border-radius: 50px;
+        }
+    </style>
+
+    <img class="responsive-img" src="/FRONT END/HTML/IMAGES/W3.png" alt="Sample Image">
+
+    <hr>
+
+    <h1>Viewport Units</h1>
+
+    <style>
+        .viewport-box {
+            width: 80vw;
+            height: 30vh;
+            background: orange;
+            text-align: center;
+            line-height: 30vh;
+            font-size: 3vw;
+            color: white;
+        }
+    </style>
+
+    <div class="viewport-box">Responsive Box using vw/vh</div>
+
+    <hr>
+
+    <h1>Mobile-First Design</h1>
+
+    <style>
+        .mobile-box {
+            background: purple;
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        @media (min-width: 600px) {
+            .mobile-box {
+                font-size: 20px;
+                background: teal;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-box {
+                font-size: 24px;
+                background: navy;
+            }
+        }
+    </style>
+
+    <div class="mobile-box">Mobile-First Responsive Design</div>
+
+</body>
+
+</html>

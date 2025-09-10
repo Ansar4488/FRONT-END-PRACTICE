@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Card</title>
+  <style>
+    /* CSS Syntax, Internal CSS, Colors, Fonts, Units, Box Model, Display, Border, Background, Overflow */
+
+    body {
+      background-color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      display: block;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      width: 300px;
+      padding: 20px;
+      margin: 0 auto;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    .profile-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      border: 3px solid #007BFF;
+    }
+
+    .name {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bio {
+      text-align: center;
+      font-size: 16px;
+      color: rgb(100, 100, 100);
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .info {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: hsl(210, 100%, 95%);
+      border: 1px dashed #007BFF;
+      overflow-y: auto;
+      height: 100px;
+    }
+
+    .info p {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="/HTML/IMAGES/W3.png" alt="Profile" class="profile-img">
+    
+    <div class="name">John Doe</div>
+    
+    <div class="bio">Web Developer & Designer</div>
+
+    <div class="info">
+      <p><strong>Email:</strong> john@example.com</p>
+      <p><strong>Phone:</strong> +91 9876543210</p>
+      <p><strong>Location:</strong> India</p>
+    </div>
+
+    <div class="footer">
+      © 2025 John’s Portfolio
+    </div>
+  </div>
+
+</body>
+</html>

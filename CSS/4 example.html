@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Design Mini Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .responsive-header {
+      font-size: 6vw;
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 10px;
+    }
+
+    .responsive-img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+
+    .content {
+      font-size: 4vw;
+      padding: 10px;
+      background: lightgray;
+    }
+
+    @media (min-width: 768px) {
+      .content {
+        font-size: 2vw;
+        background: lightgreen;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .content {
+        font-size: 1.2vw;
+        background: lightblue;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="responsive-header">Responsive Page</div>
+
+  <img class="responsive-img" src="/FRONT END/HTML/IMAGES/W3.png" alt="Responsive Sample">
+
+  <div class="content">
+    This content adjusts size and color based on screen width using media queries and viewport units.
+  </div>
+
+</body>
+</html>

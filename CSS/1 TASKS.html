@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BASIC EXAMPLE</title>
+    <style>
+        .styled{
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration-line: underline;
+            color: #3498db;
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            background-color: lightyellow;
+            border-style: solid;
+            border-color: black;
+        }
+        .block{
+            background-color: pink;
+            display: block;
+        }
+        .inline{
+            background-color: lightblue;
+            display: inline;
+        }
+        .inlineblock{
+            background-color: lightgreen;
+            display: inline-block;
+        }
+        .dashed{
+            border: 2px dashed red;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .overflow{
+            width: 200px;
+            height: 100px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            border: 2px solid black;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="styled">Styled Text</p>
+    </div>
+    <div>
+        <p class="box">Box with padding, margin, width & height</p>
+    </div>
+    <div>
+        <p class="block">Block Element</p>
+        <p class="inline">Inline</p>
+        <p class="inlineblock">inline block</p>
+    </div>
+    <div>
+        <p class="dashed">Dashed Border & Rounded Corners</p>
+    </div>
+    <div class="image">
+        <img src="/HTML/IMAGES/W3.png" alt="image">
+    </div>
+    <div>
+        <p class="overflow">This is a long long text that will overflow horizontally.</p>
+    </div>
+</body>
+
+</html>
